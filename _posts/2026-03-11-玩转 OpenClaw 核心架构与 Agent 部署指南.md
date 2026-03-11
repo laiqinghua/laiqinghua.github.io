@@ -3,7 +3,7 @@ title: "玩转 OpenClaw 核心架构与 Agent 部署指南"
 date: 2026-03-11T19:45:00+08:00
 layout: post
 categories: [AI, 技术]
-tags: [搬运，OpenClaw, Agent, 多 Agent 架构，Skills 管理]
+tags: [搬运,OpenClaw,Agent,多Agent架构,Skills管理]
 ---
 
 建议有打算深入了解 OpenClaw 的同学优先看 OpenClaw 源码和官方文档，目前该项目正在高频迭代中。本文重点从核心框架、通信机制进行介绍，争取让你看完本文后知道 OpenClaw 是怎么运作的，以及其能力边界在哪里。以及尤其希望大家注意的，是 OpenClaw 的安全风险，如果选择部署 OpenClaw，就按最坏的打算 (数据全 Open) 去对待自己机器上的数据。
