@@ -451,7 +451,6 @@ OpenClaw 是基于 Node.js 的，所以先装 Node.js。
    
    https://q.qq.com/qqbot/openclaw/index.html
    
-   ![](C:\Users\lqh\AppData\Roaming\marktext\images\2026-03-11-00-15-40-image.png)
    
    **1. 接下来的步骤**
    
