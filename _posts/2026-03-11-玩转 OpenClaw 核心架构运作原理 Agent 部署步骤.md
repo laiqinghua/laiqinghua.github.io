@@ -1,6 +1,6 @@
 ---
 title: "玩转 OpenClaw 核心架构运作原理 Agent 部署步骤"
-date: 2026-03-11T17:27:00+08:00
+date: 2026-03-11T17:58:00+08:00
 layout: post
 categories: [AI, 技术]
 tags: [搬运，OpenClaw, Agent, 多 Agent, 架构]
@@ -26,7 +26,7 @@ tags: [搬运，OpenClaw, Agent, 多 Agent, 架构]
 
 OpenClaw 的优势在于共识的推广，举个具体的例子，在没有 OpenClaw 之间，我们基本人手一个自己搭建的 Agent，像我之前搭建的 L1~L5 5 层架构 Agent：
 
-![图片](/assets/images/post/1773221235722.jpg)
+![图片](/assets/images/post/1773223096841.jpg)
 
 相信每个搭 Agent 架构的同学，都得考虑 skills 管理、Agent 身份赋予、Agent 架构自进化、memory-search 和 Session 管理这些。
 
@@ -180,7 +180,7 @@ LLM Model 越聪明，OpenClaw 发挥就会越好、越稳定。
 
 ##### 1、Agent 的核心配置项
 
-![图片](/assets/images/post/1773221235723.jpg)
+![图片](/assets/images/post/1773223096842.jpg)
 
 每个 Agent 都有其对应的 workspace，如图是一个 Agent 最核心的配置文件。其各文件的含义如下：
 
@@ -367,11 +367,11 @@ Agent 通过文件系统工具（fsWrite/fsAppend）更新 Memory.md。
 
 看图就好，这张图非常清晰了。
 
-![图片](/assets/images/post/1773221235724.jpg)
+![图片](/assets/images/post/1773223096843.jpg)
 
 #### （三）单 Agent 架构会出现什么问题？
 
-![图片](/assets/images/post/1773221235725.jpg)
+![图片](/assets/images/post/1773223096844.jpg)
 
 Transformer 架构和原理想必大家都已清楚，单 Agent 的架构不仅有可能导致 Context 的快速消耗，还会错误 search 导致交付质量降低。
 
