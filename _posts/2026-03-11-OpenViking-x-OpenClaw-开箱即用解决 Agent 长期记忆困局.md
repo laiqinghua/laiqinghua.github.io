@@ -2,7 +2,7 @@
 title: "OpenViking x OpenClaw：开箱即用 解决 Agent 的长期记忆困局"
 date: 2026-03-11T14:13:00+08:00
 categories: AI 技术
-tags: [搬运, OpenClaw, OpenViking, Agent, 长期记忆]
+tags: [搬运，OpenClaw, OpenViking, Agent, 长期记忆]
 layout: post
 ---
 
@@ -32,6 +32,8 @@ OpenViking 的核心价值在于：
 - **插件化无缝集成**：作为 OpenViking Plugin，它可以轻松接入 OpenClaw，开发者无需对框架核心代码进行任何改造，即可享受强大的长程记忆能力。
 
 简而言之，OpenViking 为 OpenClaw 提供了一个轻量、高效且低成本的"长程记忆解决方案"。
+
+![OpenViking 记忆架构](https://mmbiz.qpic.cn/sz_mmbiz_png/placeholder1.png)
 
 ## 效果与成本的双重飞跃
 
@@ -74,7 +76,15 @@ OpenViking 的核心价值在于：
 
 - **原生 OpenClaw 反复犯错**：OpenClaw 在调用"查询公司内部销售数据库"的 Skill 时，每次都会犯同样的错误（如参数格式不对、缺少鉴权信息等），需要经过多次报错、试错才能勉强完成任务。而每次开启新对话，它都会把以前犯过的错再犯一遍。
 
+![原生 OpenClaw：第一次调用 Skill](https://mmbiz.qpic.cn/sz_mmbiz_png/placeholder2.png)
+
+![原生 OpenClaw：再次调用 Skill 出同样错误](https://mmbiz.qpic.cn/sz_mmbiz_png/placeholder3.png)
+
 - **结合 OpenViking 越用越熟练**：OpenViking 为 OpenClaw 引入了针对特定资源的经验记忆机制。当 OpenClaw 第一次成功使用某个 Skill 或克服某个工具的"坑"之后，OpenViking 会自动总结出"避坑指南"（如：该 API 时间参数必须是 ISO 格式），并将其作为该 Skill 的专属上下文记忆存储起来。下次调用时，OpenClaw 会自动检索并加载这份"经验记忆"，指导自己避开雷区，实现一次性精准调用，大幅降低了推理成本和工具报错率。
+
+![结合 OpenViking：第一次调用 Skill，经验记忆生成](https://mmbiz.qpic.cn/sz_mmbiz_png/placeholder4.png)
+
+![结合 OpenViking：再次调用能正确引用 skill 记忆，直接完成任务](https://mmbiz.qpic.cn/sz_mmbiz_png/placeholder5.png)
 
 ### 优势二：长程对话下的核心信息不丢失，保持记忆稳定
 
@@ -82,7 +92,15 @@ OpenViking 的核心价值在于：
 
 - **原生 OpenClaw 金鱼记忆**：小杨在进行各种主题超过一百轮对话后，OpenClaw 开始遗忘最初设置的工作目标，导致回答不够聚焦，无法产生价值。
 
+![原生 OpenClaw：第一次对话同步目标](https://mmbiz.qpic.cn/sz_mmbiz_png/placeholder6.png)
+
+![原生 OpenClaw：100 轮对话后，无法围绕工作目标输出核心要点，记忆遗忘](https://mmbiz.qpic.cn/sz_mmbiz_png/placeholder7.png)
+
 - **结合 OpenViking 越用越懂你**：OpenClaw 能够始终记住对话的核心上下文。即使在百轮对话后，依然能准确调用最初设定的目标，并结合过程中的新信息进行推理，准确写出了我们在开头希望它明确的核心指标，表现出优异的"记忆一致性"。
+
+![结合 OpenViking：第一次对话同步目标](https://mmbiz.qpic.cn/sz_mmbiz_png/placeholder8.png)
+
+![结合 OpenViking：100 轮对话后，仍能记住长期目标并给出要点，记忆稳定](https://mmbiz.qpic.cn/sz_mmbiz_png/placeholder9.png)
 
 ### 优势三：多 OpenClaw 共享统一用户记忆，实现高效协同
 
@@ -155,6 +173,10 @@ OpenViking 的征程才刚刚开始，我们深知一个充满活力的社区是
 - **成为贡献者**：无论是提交一个 Issue，还是贡献一段代码 (PR)，你的每一次参与都将使 OpenViking 变得更好。
 
 火山引擎将长期投入并维护 OpenViking 项目，持续优化其与 OpenClaw 等主流框架的适配体验。让我们一起，为 Agent 插上记忆的翅膀，共同定义下一代 Agent 上下文管理的未来！
+
+![飞书群二维码](https://mmbiz.qpic.cn/sz_mmbiz_png/placeholder10.png)
+
+![微信群二维码](https://mmbiz.qpic.cn/sz_mmbiz_png/placeholder11.png)
 
 ## 关于我们：字节跳动 Viking 团队
 
