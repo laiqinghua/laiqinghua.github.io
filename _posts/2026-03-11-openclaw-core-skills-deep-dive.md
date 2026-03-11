@@ -2,8 +2,8 @@
 title: "OpenClaw 核心 Skills 深度解析：从自我进化到安全审计的完整指南"
 date: 2026-03-11T23:30:00+08:00
 layout: post
-categories: [AI, 技术]
-tags: ["搬运", "OpenClaw", "Skills", "Agent", "自我进化"]
+categories: [AI,技术]
+tags: ["搬运","OpenClaw","Skills","Agent","自我进化"]
 ---
 
 OpenClaw 的强大不仅在于其灵活的 Agent 架构，更在于其丰富的 Skills 生态系统。今天我们来深度解析 10 个核心 Skills，涵盖信息检索、自我进化、安全审计等关键能力。
