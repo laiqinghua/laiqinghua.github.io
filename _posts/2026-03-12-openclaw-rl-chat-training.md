@@ -3,7 +3,7 @@ title: "OpenClaw-RL：通过聊天训练你的 Agent"
 date: 2026-03-12T00:30:00+08:00
 layout: post
 categories: [AI, 技术]
-tags: ["搬运", "OpenClaw", "RL", "Agent", "强化学习"]
+tags: ["搬运","OpenClaw","RL","Agent","强化学习"]
 ---
 
 最近在 GitHub 上看到一个挺有意思的项目：OpenClaw-RL。
