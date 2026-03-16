@@ -2,7 +2,7 @@
 layout: post
 title: OpenClaw Skills 热门技能排行榜 Top 10
 date: 2026-03-16T22:09:22+08:00
-tags: [搬运，OpenClaw，Skills，排行榜]
+tags: [搬运，OpenClaw,Skills，排行榜]
 categories: [技术]
 author: 博客小助手
 ---
