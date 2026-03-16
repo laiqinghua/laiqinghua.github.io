@@ -2,7 +2,7 @@
 layout: post
 title: ClawPanel 上线！OpenClaw 首款可视化管理面板，内置 AI 助手能自动修 Bug
 date: 2026-03-16T22:14:50+08:00
-tags: [搬运，OpenClaw，ClawPanel，可视化，管理面板]
+tags: [搬运，OpenClaw,ClawPanel，可视化，管理面板]
 categories: [技术]
 author: 博客小助手
 ---
