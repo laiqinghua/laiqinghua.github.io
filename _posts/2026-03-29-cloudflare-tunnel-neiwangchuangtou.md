@@ -13,6 +13,8 @@ categories: [技术]
 
 以前我们习惯用 frp 或者 ngrok，但有一个堪称"降维打击"的方案——Cloudflare Tunnel。今天，老朋友我就带大家拆解一下这个神器，看看它到底香在哪！
 
+![Cloudflare Tunnel 内网穿透](/assets/images/post/f8034c9dbecd3dd5c2e7dc5f1a2ea7fb.jpg)
+
 ## 🆚 为什么说它是内网穿透的"终极方案"？
 
 在聊怎么用之前，咱们先看看它和老牌工具的硬核对比。
@@ -26,6 +28,8 @@ categories: [技术]
 | 成本 | 完全免费（个人用户） | 需要支付 VPS 月费 | 基本够用，高级功能贵 |
 
 💡 **一句话总结：** Cloudflare Tunnel 就像是给你家开了个"直通全球"的后门，你不需要买云服务器，不需要在路由器上开端口（Inbound），只要你的设备能上网，它就能穿透出来。而且，它自带 DDoS 防护 和 SSL 证书，安全性直接拉满！🛡️
+
+![功能对比图](/assets/images/post/8e9153cc4ee1a836bbd8bf83ff39d1d0.jpg)
 
 ## 🛠️ 准备工作
 
@@ -43,6 +47,8 @@ Cloudflare 现在的 Zero Trust 面板已经做得非常傻瓜化了，建议大
 
 登录 Cloudflare 后台，点击左侧菜单栏的 Zero Trust（以前叫 Teams）。如果是第一次进入，按提示选"Free"计划即可，不需要绑定信用卡也能用。
 
+![Zero Trust 面板](/assets/images/post/af76f538ad1ae7bcf80159e4aaabcdf6.jpg)
+
 ### 第二步：创建 Tunnel 隧道
 
 在 Zero Trust 面板左侧，依次点击 Networks -> Tunnels。
@@ -52,6 +58,8 @@ Cloudflare 现在的 Zero Trust 面板已经做得非常傻瓜化了，建议大
 选择连接器（Connector）：
 - **Docker（强烈推荐）：** 复制网页给出的那行 `docker run` 命令，在你的服务器上一贴，回车，搞定！🐳
 - **Windows/Linux：** 下载对应的安装包，运行网页上的安装脚本。
+
+![创建 Tunnel](/assets/images/post/01ebc98e10f9e1675e6e6c80886ba29f.jpg)
 
 ### 第三步：配置公共主机名
 
@@ -66,6 +74,8 @@ Service 填写：这里填你内网服务的真实地址。
 - URL：`127.0.0.1:8080`（或者你 NAS 具体的内网 IP 和端口）
 
 点击保存。
+
+![配置主机名](/assets/images/post/f6218ff214f934af3a55a8f6dcd85a2d.jpg)
 
 **大功告成！** 现在，你在任何地方输入 `nas.yourdomain.com`，就能直接访问你家里的服务了！🎉
 
