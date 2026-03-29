@@ -288,46 +288,17 @@ chmod 700 /home/lqh/data/shared/context
 chmod 600 /home/lqh/data/shared/context/*.json
 ```
 
-### 5.2 配置全局 openclaw.json
+### 5.2 配置方式说明
 
-在 `~/.openclaw/openclaw.json` 中添加：
+**重要提示**：OpenClaw 的配置验证器采用严格 schema 验证，不支持自定义配置项。
 
-```json
-{
-  "agents": {
-    "defaults": {
-      "workspace": "/home/lqh/.openclaw/workspace",
-      "sharedContext": {
-        "enabled": true,
-        "contextPath": "/home/lqh/data/shared/context/agent-state.json",
-        "tasksPath": "/home/lqh/data/shared/tasks/",
-        "artifactsPath": "/home/lqh/data/shared/artifacts/",
-        "logsPath": "/home/lqh/data/shared/logs/",
-        "forceRead": {
-          "onSpawn": true,
-          "beforeUserResponse": true,
-          "beforeTaskExecution": true
-        },
-        "forceWrite": {
-          "onTaskComplete": true,
-          "onConfigChange": true,
-          "onArtifactCreated": true
-        },
-        "security": {
-          "forbiddenPaths": ["~/.openclaw/openclaw.json", "~/.openclaw/identity/"],
-          "sensitiveDataPolicy": "external_config_only"
-        }
-      },
-      "subagents": {
-        "model": "bailian/qwen3.5-plus",
-        "runTimeoutSeconds": 1800,
-        "inheritSharedContext": true,
-        "sharedContextTemplate": "/home/lqh/data/shared/templates/task-templates.md"
-      }
-    }
-  }
-}
-```
+共享上下文协议通过以下方式实现，**无需修改 openclaw.json**：
+
+1. **文档驱动**：在 `AGENTS.md` 中定义协议规范
+2. **Task 模板注入**：在 `sessions_spawn` 的 task prompt 中包含强制读取指令
+3. **共享文件结构**：创建 `/home/lqh/data/shared/` 目录供所有 Agent 使用
+
+如果你希望在全局配置中记录协议设置，可以在 `openclaw.json` 的注释中说明，或使用外部文档。
 
 ### 5.3 更新 AGENTS.md
 
